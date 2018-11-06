@@ -1,0 +1,16 @@
+
+<div class="container">
+ <ul>
+  <% @tasks.each do |element| %>
+  <li><input type="checkbox" id="coding" name="interest" value="coding"
+    <% if element.completed == true %>
+    checked
+    <% end %>
+    onclick="return false;">
+    <%= link_to element.title, "/tasks/#{element.id}" %></li>
+  <% end %>
+</ul>
+
+<%= link_to "add new shit", "/tasks/new" %>
+</div>
+

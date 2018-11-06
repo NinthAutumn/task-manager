@@ -1,0 +1,18 @@
+
+
+
+
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <div class="boxe">
+    <p><%= @task.details %></p>
+  </div>
+      <%= link_to "Back", "/tasks", class: "btn btn-primary" %>
+  <%= link_to "Edit", "/tasks/#{@task.id}/edit", class: "btn btn-warning"%>
+<%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+
+</div>
+
+
